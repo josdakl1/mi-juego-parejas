@@ -1,0 +1,20 @@
+.pair-group {
+    border: 2px solid #007bff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f8f9fa;
+}
+
+.pair-group h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #007bff;
+}
+
+.card {
+    background: white;
+    border-left: 4px solid #ccc;
+    padding: 8px;
+    margin: 5px 0;
+}
