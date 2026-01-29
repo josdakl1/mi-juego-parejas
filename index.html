@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Respuestas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <section id="home-screen" class="screen">
+            <h1>Bienvenido</h1>
+            <button onclick="showScreen('player-screen', 1)">Soy Jugador 1</button>
+            <button onclick="showScreen('player-screen', 2)">Soy Jugador 2</button>
+            <button class="btn-admin" onclick="showScreen('admin-screen')">Panel Admin</button>
+        </section>
+
+        <section id="player-screen" class="screen hidden">
+            <h2 id="player-title">Jugador</h2>
+            <input type="text" id="player-name" placeholder="Tu nombre">
+            <textarea id="player-response" placeholder="Escribe tu respuesta breve..."></textarea>
+            <button onclick="saveData()">Enviar Datos</button>
+            <button class="btn-back" onclick="showScreen('home-screen')">Volver</button>
+        </section>
+
+        <section id="admin-screen" class="screen hidden">
+            <h2>Panel de Control</h2>
+            <div id="admin-content">
+                <p>Esperando datos...</p>
+            </div>
+            <button class="btn-back" onclick="showScreen('home-screen')">Volver</button>
+        </section>
+    </div>
+<section id="player-screen" class="screen hidden">
+    <h2 id="player-title">Jugador</h2>
+    <input type="number" id="pair-number" placeholder="Número de Pareja (ej. 1, 2...)" min="1">
+    
+    <input type="text" id="player-name" placeholder="Tu nombre">
+    <textarea id="player-response" placeholder="Escribe tu respuesta breve..."></textarea>
+    
+    <button onclick="saveData()">Enviar Datos</button>
+    <button class="btn-back" onclick="showScreen('home-screen')">Volver</button>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
